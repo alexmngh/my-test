@@ -17,12 +17,12 @@ public class ManagementSystem {
   // закрытый конструктор
   private ManagementSystem() {
 //    loadGroups();
-//    loadStudents();
+    loadStudents();
   }
 
   // метод getInstance - проверяет, инициализирована ли статическая
   // переменная (в случае надобности делает это) и возвращает ее
-  public static synchronized ManagementSystem getInstance() {
+  private static synchronized ManagementSystem getInstance() {
     if (instance == null) {
       instance = new ManagementSystem();
     }
@@ -41,24 +41,62 @@ public class ManagementSystem {
       return;
     }
 
-    ManagementSystem ms = ManagementSystem.getInstance();
+//    ManagementSystem ms = ManagementSystem.getInstance();
 
 
-    // Просмотр полного списка студентов
-    printString("Полный список студентов");
-    printString("***********************");
-    Collection<Student> allStudends = ms.getAllStudents();
-    if (allStudends != null)
-      for (Student si : allStudends) {
-        printString(si);
-      }
-    printString();
 
 
 
 //далее
+
+
   }
 
+  // Метод создает несколько студентов и помещает их в коллекцию
+  public void loadStudents() {
+    if (students == null) {
+      // Мы используем коллекцию, которая автоматически сортирует свои элементы
+      students = new TreeSet<Student>();
+    } else {
+      students.clear();
+    }
+
+    Student s = null;
+
+    // Вторая группа
+    s = new Student();
+    s.setStudentId(1);
+    s.setFirstName("Иван");
+    s.setSurName("Степанов");
+    s.setFacultet("стройфак");
+    s.setUniversitet("РИНИ");
+    students.add(s);
+
+    s = new Student();
+    s.setStudentId(2);
+    s.setFirstName("Наталья");
+    s.setSurName("Чичикова");
+    s.setFacultet("энего");
+    s.setUniversitet("РИНИ");
+    students.add(s);
+
+    // Первая группа
+    s = new Student();
+    s.setStudentId(3);
+    s.setFirstName("Петр");
+    s.setSurName("Сушкин");
+    s.setFacultet("прим");
+    s.setUniversitet("РИНИ");
+    students.add(s);
+
+    s = new Student();
+    s.setStudentId(4);
+    s.setFirstName("Вероника");
+    s.setSurName("Ковалева");
+    s.setFacultet("горный");
+    s.setUniversitet("РИНИ");
+    students.add(s);
+  }
 
 
   // Получить список всех студентов

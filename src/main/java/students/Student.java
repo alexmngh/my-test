@@ -13,12 +13,10 @@ public class Student {
   private String firstName;
   // поле ФАМИЛИЯ
   private String surName;
-  // поле ИД ГРУППЫ
-  private int groupId;
   // поле факультет
-  private int facultet;
+  private String facultet;
   //университет
-  private int universitet;
+  private String universitet;
 
 
   public int getStudentId() {
@@ -45,27 +43,19 @@ public class Student {
     this.surName = surName;
   }
 
-  public int getGroupId() {
-    return groupId;
-  }
-
-  public void setGroupId(int groupId) {
-    this.groupId = groupId;
-  }
-
-  public int getFacultet() {
+  public String getFacultet() {
     return facultet;
   }
 
-  public void setFacultet(int facultet) {
+  public void setFacultet(String facultet) {
     this.facultet = facultet;
   }
 
-  public int getUniversitet() {
+  public String getUniversitet() {
     return universitet;
   }
 
-  public void setUniversitet(int universitet) {
+  public void setUniversitet(String universitet) {
     this.universitet = universitet;
   }
 }
