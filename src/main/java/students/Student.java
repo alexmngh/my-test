@@ -16,7 +16,7 @@ public class Student {
   // поле факультет
   private String facultet;
   //университет
-  private String universitet;
+  private UniverName universitet;
 
 
   public int getStudentId() {
@@ -51,11 +51,11 @@ public class Student {
     this.facultet = facultet;
   }
 
-  public String getUniversitet() {
+  public UniverName getUniversitet() {
     return universitet;
   }
 
-  public void setUniversitet(String universitet) {
+  public void setUniversitet(UniverName universitet) {
     this.universitet = universitet;
   }
 }

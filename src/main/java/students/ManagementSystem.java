@@ -69,7 +69,7 @@ public class ManagementSystem {
     s.setFirstName("Иван");
     s.setSurName("Степанов");
     s.setFacultet("стройфак");
-    s.setUniversitet("РИНИ");
+    s.setUniversitet(UniverName.РИНИ);
     students.add(s);
 
     s = new Student();
@@ -77,7 +77,7 @@ public class ManagementSystem {
     s.setFirstName("Наталья");
     s.setSurName("Чичикова");
     s.setFacultet("энего");
-    s.setUniversitet("РИНИ");
+    s.setUniversitet(UniverName.РИНИ);
     students.add(s);
 
     // Первая группа
@@ -86,7 +86,7 @@ public class ManagementSystem {
     s.setFirstName("Петр");
     s.setSurName("Сушкин");
     s.setFacultet("прим");
-    s.setUniversitet("РИНИ");
+    s.setUniversitet(UniverName.РИНИ);
     students.add(s);
 
     s = new Student();
@@ -94,7 +94,7 @@ public class ManagementSystem {
     s.setFirstName("Вероника");
     s.setSurName("Ковалева");
     s.setFacultet("горный");
-    s.setUniversitet("РИНИ");
+    s.setUniversitet(UniverName.РИНИ);
     students.add(s);
   }
 
