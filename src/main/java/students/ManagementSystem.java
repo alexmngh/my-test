@@ -98,6 +98,11 @@ public class ManagementSystem {
     students.add(s);
   }
 
+  // Добавить студента
+  public void insertStudent(Student student) {
+    // Просто добавляем объект в коллекцию
+    students.add(student);
+  }
 
   // Получить список всех студентов
   public Collection<Student> getAllStudents() {
